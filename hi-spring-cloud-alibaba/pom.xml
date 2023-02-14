@@ -5,31 +5,28 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.jxx</groupId>
-    <artifactId>hello-spring-cloud-alibaba</artifactId>
+    <artifactId>hi-spring-cloud-alibaba</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>jxx-common</module>
-        <module>jxx-user-service</module>
+        <module>jxx-dto</module>
         <module>jxx-order-service</module>
-        <module>jxx-video-service</module>
-
+        <module>jxx-product-service</module>
+        <module>jxx-product-service2</module>
+        <module>jxx-gateway</module>
+        <module>jxx-dto</module>
+        <module>jxx-gateway</module>
     </modules>
-    <!-- 一般来说父级项目的packaging都为pom，packaging默认类型jar类型-->
-    <packaging>pom</packaging>
-
 
     <properties>
-        <!-- Spring Cloud -->
-        <spring.cloud.version>Hoxton.SR12</spring.cloud.version>
+        <!-- springBoot springCloud springCloudAlibaba-->
+        <spring-boot-dependencies>2.3.12.RELEASE</spring-boot-dependencies>
+        <spring-cloud-dependencies>Hoxton.SR12</spring-cloud-dependencies>
+        <spring-cloud-alibaba-dependencies>2.2.9.RELEASE</spring-cloud-alibaba-dependencies>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-
     </properties>
-
-
-
-    <!--锁定版本-->
     <dependencyManagement>
         <dependencies>
             <!--参考 springCLoud github 选定版本 https://repo.spring.io/ui/native/libs-milestone/org/springframework/cloud/spring-cloud-build/2.3.5.RELEASE/-->
@@ -59,29 +56,6 @@
                 <scope>import</scope>
             </dependency>
 
-
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>2.1.2</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
-
-
         </dependencies>
     </dependencyManagement>
-
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <configuration>
-                    <addResources>true</addResources>
-                </configuration>
-            </plugin>
-        </plugins>
-    </build>
-
 </project>
