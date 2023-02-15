@@ -14,8 +14,6 @@
         <module>jxx-product-service</module>
         <module>jxx-product-service2</module>
         <module>jxx-gateway</module>
-        <module>jxx-dto</module>
-        <module>jxx-gateway</module>
     </modules>
 
     <properties>
@@ -23,6 +21,7 @@
         <spring-boot-dependencies>2.3.12.RELEASE</spring-boot-dependencies>
         <spring-cloud-dependencies>Hoxton.SR12</spring-cloud-dependencies>
         <spring-cloud-alibaba-dependencies>2.2.9.RELEASE</spring-cloud-alibaba-dependencies>
+        <org.projectlombok.lombok>1.16.6</org.projectlombok.lombok>
         <java.version>1.8</java.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>

@@ -20,7 +20,6 @@ public class AuthFilter implements GlobalFilter, Ordered {
         return chain.filter(exchange);
     }
 
-
     @Override
     public int getOrder() {
         return 0;
