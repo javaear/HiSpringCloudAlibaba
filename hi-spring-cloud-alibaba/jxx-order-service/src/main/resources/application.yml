@@ -1,0 +1,12 @@
+server:
+  port: 6007
+
+spring:
+  application:
+    name: jxx-order-service
+
+  #nacos
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848

@@ -11,5 +11,43 @@
 
     <artifactId>jxx-product-service2</artifactId>
 
+    <properties>
+        <mybatis-spring-boot-starter>2.1.2</mybatis-spring-boot-starter>
+    </properties>
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.3.12.RELEASE</version>
+        </dependency>
+        <!--参考： http://www.mybatis.cn/archives/861.html-->
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${mybatis-spring-boot-starter}</version>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.16.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <!--参考：nocus服務注冊和发现-->
+        <dependency>
+            <groupId>com.alibaba.cloud</groupId>
+            <artifactId>spring-cloud-starter-alibaba-nacos-discovery</artifactId>
+        </dependency>
 
+        <dependency>
+            <groupId>org.jxx</groupId>
+            <artifactId>jxx-dto</artifactId>
+            <version>1.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
 </project>

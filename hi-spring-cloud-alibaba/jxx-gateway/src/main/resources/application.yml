@@ -1,0 +1,27 @@
+server:
+  port: 6006
+
+spring:
+  application:
+    name: jxx-gateway
+
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+    gateway:
+      routes:
+        - id: jxx-request-order111  #标识可以任意设置
+          # uri: http://localhost:6002
+          #访问的路径，lb://负载均衡访问固定写法，通过负载均衡调取所有设定中的一份
+          uri: lb://localhost:6002
+          order: 1 # 越小优先级越高
+          predicates: #路径断言
+            - Path=/service/**
+          filters: #过滤器
+            - StripPrefix=1  #去掉第一层前缀
+
+      discovery:
+        locator:
+          enabled: true  #网关请求nac os的服务应用
